@@ -16,6 +16,8 @@ RUN \
     chown root:root /docker-entrypoint.sh && \
     chmod 755 /docker-entrypoint.sh && \
     apt-get -q -y update && \
+    apt-get install -q -y procps && \
+    apt-get install -q -y vim && \
     apt-get install -q -y sasl2-bin && \
     apt-get install -q -y subversion && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
